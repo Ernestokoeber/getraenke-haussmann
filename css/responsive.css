@@ -1,0 +1,259 @@
+/* ==========================================================================
+   Responsive — Mobile-first → Tablet (≥768px) → Desktop (≥1024px)
+   ========================================================================== */
+
+/* ---- Mobile Overrides (base is already mobile-first) ---- */
+
+/* Hero — smaller text on small screens */
+.hero__title {
+  font-size: var(--font-size-3xl);
+}
+
+.hero__tagline {
+  font-size: var(--font-size-xs);
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-base);
+}
+
+/* About stats — smaller on mobile */
+.about__stat-number {
+  font-size: var(--font-size-2xl);
+}
+
+.about__highlight {
+  gap: var(--space-4);
+}
+
+/* Contact CTA phone — fits mobile */
+.contact__cta-phone {
+  font-size: var(--font-size-3xl);
+}
+
+.contact__cta {
+  padding: var(--space-8) var(--space-4);
+}
+
+.contact__cta-label {
+  font-size: var(--font-size-sm);
+}
+
+/* Products labels — smaller on mobile */
+.products__label {
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-3);
+}
+
+/* Section titles — smaller on mobile */
+.section__title {
+  font-size: var(--font-size-2xl);
+}
+
+/* Services card title */
+.services__card-title {
+  font-size: var(--font-size-xl);
+}
+
+/* USP Banner — stacked on mobile */
+.usp-banner__text {
+  font-size: var(--font-size-sm);
+}
+
+/* ---- Tablet ---- */
+@media (min-width: 768px) {
+
+  /* Layout */
+  .container {
+    padding-inline: var(--space-8);
+  }
+
+  .section {
+    padding-block: var(--space-20);
+  }
+
+  .section__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Header */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: var(--space-1);
+  }
+
+  .nav__link {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--font-size-sm);
+  }
+
+  .header__cta {
+    display: inline-flex !important;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 90vh;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-5xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-sm);
+  }
+
+  .hero__subtitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero__actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  /* USP Banner */
+  .usp-banner__grid {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--space-8);
+  }
+
+  .usp-banner__divider {
+    display: block;
+  }
+
+  .usp-banner__text {
+    font-size: var(--font-size-base);
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .services__card-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  /* Products */
+  .products__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products__label {
+    font-size: var(--font-size-lg);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  /* About */
+  .about__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about__text-block {
+    order: 1;
+  }
+
+  .about__image-wrapper {
+    order: 2;
+  }
+
+  .about__stat-number {
+    font-size: var(--font-size-4xl);
+  }
+
+  .about__highlight {
+    gap: var(--space-8);
+  }
+
+  /* Contact */
+  .contact__cta-phone {
+    font-size: var(--font-size-5xl);
+  }
+
+  .contact__cta {
+    padding: var(--space-10) var(--space-6);
+  }
+
+  .contact__cta-label {
+    font-size: var(--font-size-lg);
+  }
+
+  .contact__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer */
+  .footer__inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/* ---- Desktop ---- */
+@media (min-width: 1024px) {
+
+  /* Layout */
+  .section {
+    padding-block: var(--space-24);
+  }
+
+  /* Header */
+  .nav__link {
+    font-size: var(--font-size-base);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  /* Hero */
+  .hero__title {
+    font-size: var(--font-size-6xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-base);
+  }
+
+  /* Services */
+  .services__card {
+    padding: var(--space-10);
+  }
+
+  /* Products */
+  .products__grid {
+    gap: var(--space-6);
+  }
+
+  .products__label {
+    font-size: var(--font-size-xl);
+  }
+
+  /* About */
+  .about__content {
+    gap: var(--space-16);
+  }
+
+  .about__stat-number {
+    font-size: var(--font-size-5xl);
+  }
+}

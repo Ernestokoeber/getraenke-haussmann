@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Products / Sortiment Section
+   ========================================================================== */
+
+.products__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.products__item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  cursor: default;
+  box-shadow: var(--shadow-md);
+}
+
+.products__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow), filter var(--transition-slow);
+}
+
+.products__item:hover .products__image {
+  transform: scale(1.1);
+  filter: brightness(1.05);
+}
+
+.products__item:hover .products__overlay {
+  background: linear-gradient(to top, rgba(185, 28, 28, 0.8) 0%, rgba(185, 28, 28, 0.1) 50%, transparent 100%);
+}
+
+.products__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.1) 50%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-5);
+  transition: background var(--transition-base);
+}
+
+.products__label {
+  font-family: var(--font-family-heading);
+  color: var(--color-white);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--color-accent);
+}
